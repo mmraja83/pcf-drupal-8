@@ -1,0 +1,16 @@
+stages:
+    - database
+    - deploy
+
+deploy-drupal:
+  stage: deploy
+  tags:
+    - pcf
+  script:
+    - cf api api.sys.pcf.softescu.com
+    - cf auth admin kzWdyWZWQJsl61oWS7qr7cwFBM_YN5Zp
+    - cf target -o Softescu -s development
+    - cf push -m 1G -k 1G -b https://github.com/cloudfoundry/php-buildpack.git drupal8-pcf
+    - cf bind-service drupal8-pcf drupal8-pcf-db
+    - cf restart drupal8-pcf
+  when: manual

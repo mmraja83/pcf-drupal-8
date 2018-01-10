@@ -1,0 +1,8 @@
+---
+applications:
+- name: drupal-8-pcf
+  buildpack: https://github.com/cloudfoundry/php-buildpack.git
+  disk_quota: 1024M
+  memory: 1024M
+  services:
+    - drupal-8-pcf-db

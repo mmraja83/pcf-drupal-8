@@ -1,0 +1,6 @@
+{
+    "PHP_VERSION": "{PHP_70_LATEST}",
+    "PHP_EXTENSIONS": ["bz2", "curl", "dba", "gd", "imagick", "imap", "mbstring", "mysqli", "opcache", "openssl", "pdo", "pdo_mysql", "pdo_odbc", "sockets", "xsl", "zip", "zlib"],
+    "PHP_MODULES": [ "pear", "fpm", "cli"],
+    "ADMIN_EMAIL": "gheorghe.casian@softescu.ro"
+}

@@ -54,7 +54,7 @@ This tutorial assumes that you already have Pivotal Cloud Foundry installed and 
 
 ### You need to create an MySQL service instance in PCF.
   ```bash
-  cf create-service p-mysql <plan name> drupal-8-pcf-db”
+  cf create-service p-mysql <plan name> drupal-8-pcf-db
   ```
 
 ### Push it to CloudFoundry.
@@ -174,4 +174,3 @@ PHP Opcache configuration with recommended php.ini settings were added here: `.b
 PHP-FPM pool configuration settings are here: `.bp-config/php/fpm.d/extra.conf`
 List of global php-fpm.conf directives can be found <a href="http://php.net/manual/en/install.fpm.configuration.php" target="_blank">here.</a>
 
-That’s it! Leave us a comment for any issue that you find!

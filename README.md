@@ -1,6 +1,6 @@
 # Pivotal Cloud Foundry for Drupal 8
 
-This tutorial will help you run Drupal 8 on Pivotal Cloud Foundry (PCF). PCF is a tool to help you run continuous integration on your own private cloud. With PCF you can easily spin off new development environments and new projects through the use of a powerful GUI.
+ This tutorial will help you run Drupal 8 on Pivotal Cloud Foundry (PCF). The solution was found and documented by Softescu. For more info on the subject-matter, also read <a href="https://softescu.com/blog/knowledge-centre/pivotal-cloud-foundry-drupal-8/02/21/2018/2066451">Softescu's dedicated blog article.</a> PCF is a tool to help you run continuous integration on your own private cloud. With PCF you can easily spin off new development environments and new projects through the use of a powerful GUI.
 
 This is an example of Drupal 8 application which can be ran on Pivotal Cloud Foundry using the PHP Build Pack. Drupal installation is based on Composer template for Drupal projects Official buildpack documentation can be found at: http://docs.cloudfoundry.org/buildpacks/php/index.htm
 
@@ -173,4 +173,3 @@ PHP Opcache configuration with recommended php.ini settings were added here: `.b
 
 PHP-FPM pool configuration settings are here: `.bp-config/php/fpm.d/extra.conf`
 List of global php-fpm.conf directives can be found <a href="http://php.net/manual/en/install.fpm.configuration.php" target="_blank">here.</a>
-

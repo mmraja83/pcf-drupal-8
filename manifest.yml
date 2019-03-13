@@ -3,7 +3,7 @@ applications:
 - name: drupal-8-pcf
   buildpack: https://github.com/cloudfoundry/php-buildpack.git
   disk_quota: 2048M
-  memory: 3024M
+  memory: 1536M
   timeout: 180
   services:
     - drupal-8-pcf-db

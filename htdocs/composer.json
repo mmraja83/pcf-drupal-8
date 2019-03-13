@@ -24,7 +24,8 @@
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",
         "drupal/simple_oauth": "3.0",
-        "drupal/s3fs": "^3.0@alpha"
+        "drupal/s3fs": "^3.0@alpha",
+        "twig/twig": "1.37.1"
     },
     "require-dev": {
         "behat/mink": "~1.7",

@@ -762,7 +762,7 @@ $settings['file_scan_ignore_directories'] = [
 
 $services = getenv("VCAP_SERVICES");
 $services_json = json_decode($services,true);
-$mysql_config = $services_json["p-mysql"][0]["credentials"];
+$mysql_config = $services_json["p.mysql"][0]["credentials"];
 
 $databases['default']['default'] = array (
   'database' => $mysql_config["name"],

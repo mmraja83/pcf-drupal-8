@@ -1,8 +1,8 @@
-# Pivotal Cloud Foundry for Drupal 8
+# Pivotal Cloud Foundry for Drupal 8 (updated 14 March 2019)
 
- This tutorial will help you run Drupal 8 on Pivotal Cloud Foundry (PCF). The solution was found and documented by Softescu. For more info on the subject-matter, also read <a href="https://softescu.com/blog/knowledge-centre/pivotal-cloud-foundry-drupal-8/02/21/2018/2066451">Softescu's dedicated blog article.</a> PCF is a tool to help you run continuous integration on your own private cloud. With PCF you can easily spin off new development environments and new projects through the use of a powerful GUI.
+This tutorial will help you run Drupal 8 on Pivotal Cloud Foundry (PCF). The solution was found and documented by Softescu. For more info on the subject-matter, also read <a href="https://softescu.com/blog/knowledge-centre/pivotal-cloud-foundry-drupal-8/02/21/2018/2066451">Softescu's dedicated blog article.</a> PCF is a tool to help you run continuous integration on your own private cloud. With PCF you can easily spin off new development environments and new projects through the use of a powerful GUI.
 
-This is an example of Drupal 8 application which can be ran on Pivotal Cloud Foundry using the PHP Build Pack. Drupal installation is based on Composer template for Drupal projects Official buildpack documentation can be found at: http://docs.cloudfoundry.org/buildpacks/php/index.htm
+This is an example of Drupal 8 application which can be ran on Pivotal Cloud Foundry using the PHP Build Pack and Pivotal MySQL V2. Drupal installation is based on Composer template for Drupal projects Official buildpack documentation can be found at: http://docs.cloudfoundry.org/buildpacks/php/index.htm
 
 ## PCF Template for Drupal 8
 
@@ -22,13 +22,14 @@ The template has the following directories:
 ## Template Features
 
 At the time of writing this blog post, the PCF Drupal 8 template delivers the following features:
-  - PHP Version 7.0.26
+  - PHP Version 7.1
   - Drush Version 8.1.15
   - MySQL Client Version 5.7.20
   - Drupal Version 8.4.3
   - Drupal Simple OAuth Version 3.0
   - Drupal s3fs Version ^3.0@alpha
   - Use of S3 bucket for files storage
+  - Twig
   - OAuth installed in Drupal
 
 <b>PHP Extensions and Modules:</b>
@@ -107,7 +108,7 @@ Example:
   ```bash
   $services = getenv("VCAP_SERVICES");
   $services_json = json_decode($services,true);
-  $mysql_config = $services_json["p-mysql"][0]["credentials"];
+  $mysql_config = $services_json["p.mysql"][0]["credentials"];
 
   ```
 
@@ -149,7 +150,7 @@ The buildpack will add any `.bp-config/php/php.ini.d/<file>.ini` files it finds 
 
 A list of available PHP versions, extensions and modules can be found <a href="https://github.com/cloudfoundry/php-buildpack/releases" target="_blank">here.</a>
 By default, our Drupal 8 template contains in `.bp-config/options.json` the following options:
-  - PHP Version: 7.0.26
+  - PHP Version: 7.1
   - PHP Extensions: bz2, curl, dba, gd, imagick, imap, mbstring, mysqli, opcache, openssl, pdo, pdo_mysql, pdo_odbc, sockets, xsl, zip, zlib
   - PHP Modules: pear, fpm, cli
 
